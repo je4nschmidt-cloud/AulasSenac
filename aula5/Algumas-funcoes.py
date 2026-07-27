@@ -68,3 +68,37 @@ print(math.log10(1000))
 help(print)
 # help() é uma ferramente nativa (built-in) do python usada para acessar o sistema de documentacao e ajuda da linguagem
 
+grito = "AEEEEEEEEEEEEEEEEEEEEE"
+print(grito.upper()) #deixa todas as letras maiusculas
+print(grito.lower()) #deixa todas as letras minusculas
+print(grito.capitalize()) #deixa a primeira letra maiuscula
+print(grito.title()) #deixa a primeira letra de cada palavra maiuscula
+print(grito.strip()) #remove os espacos em branco do inicio e do fim da string
+print(grito.replace("A", "O")) #substitui uma letra por outra  
+print(grito.split("E")) #divide a string em uma lista de strings, usando o caractere especificado como delimitador
+print(grito.find("E")) #retorna o indice da primeira ocorrencia do caractere especificado na string
+print(grito.count("E")) #retorna o numero de ocorrencias do caractere especificado na string
+print(grito.startswith("A")) #retorna True se a string comecar com o caractere especificado, caso contrario retorna False
+print(grito.endswith("E")) #retorna True se a string terminar com o caractere especificado, caso contrario retorna False
+print(grito.isalpha()) #retorna True se todos os caracteres da string forem alfabeticos, caso contrario retorna False
+print(grito.swapcase()) #inverte a capitalizacao de todas as letras da string  
+print(grito.isdigit()) #retorna True se todos os caracteres da string forem digitos, caso contrario retorna False
+print(grito.islower()) #retorna True se todos os caracteres da string forem minusculos, caso contrario retorna False
+print(grito.isupper()) #retorna True se todos os caracteres da string forem maiusculos, caso contrario retorna False
+print(grito.isspace()) #retorna True se todos os caracteres da string forem espacos em branco, caso contrario retorna False
+print(grito.isalnum()) #retorna True se todos os caracteres da string forem alfanumericos, caso contrario retorna False
+print(grito.isprintable()) #retorna True se todos os caracteres da string forem imprimiveis, caso contrario retorna False
+print(grito.isidentifier()) #retorna True se a string for um identificador valido, caso contrario retorna False
+print(grito.isnumeric()) #retorna True se todos os caracteres da string forem numericos, caso contrario retorna False
+
+espacos = '-','   espaçoso   ','-'
+print(espacos)
+print('-','   tirando    '.strip(),'-')
+
+print('-','   espaço    '.rstrip(),'-') #remove os espacos em branco do final da string
+print('-','   espaço    '.lstrip(),'-') #remove os espacos em branco do inicio da string
+
+texto = "Um anel para todos governar, um anel para encontrá-los, um anel para a todos trazer e na escuridão aprisioná-los"
+print(texto.replace('anel', 'anelzinho')) #substitui uma palavra por outra dentro da string(print)
+
+

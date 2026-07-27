@@ -102,3 +102,4 @@ texto = "Um anel para todos governar, um anel para encontrá-los, um anel para a
 print(texto.replace('anel', 'anelzinho')) #substitui uma palavra por outra dentro da string(print)
 
 
+

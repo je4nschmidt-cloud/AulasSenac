@@ -22,7 +22,7 @@ print(type(valor))
 #5) Converta a variável valor, que anteriormente era uma string, para o tipo inteiro utilizando a função int() e exiba o novo tipo de dado para confirmar a conversão.
 valor = '42'
 valor = int(valor)
-print(valor)
+print(type(valor))
 
 #6) Atribua o valor inteiro 3 à variável p e exiba o seu conteúdo na tela.
 p = 3
@@ -40,11 +40,15 @@ n1 = float(n1)
 n2 = float(n2)
 resultado = n1 + n2
 print("3.5 + 1.7 = ", resultado)
+# outra forma de fazer a soma e exibir o resultado:
+print('3.5 + 1.7 =', float(n1) + float(n2))
 
 #9) Converta o número inteiro 42 para o tipo string utilizando a função str() e exiba o tipo de dado da variável resultante c.
 c = 42
 c = str(c)
 print(type(c))
+# outra forma de fazer a conversão e exibir o tipo de dado:
+print(type(str(42)))
 
 #10) Converta o número de ponto flutuante 3.14 para string, armazene-o na variável c1 e, em seguida, exiba tanto o valor quanto o tipo de dado da variável.
 c1 = 3.14

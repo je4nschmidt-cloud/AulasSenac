@@ -21,20 +21,3 @@ else:   # Maior de idade.
        print("Maior de idade e está em casa à noite.")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

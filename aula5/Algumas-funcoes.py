@@ -101,5 +101,5 @@ print('-','   espaço    '.lstrip(),'-') #remove os espacos em branco do inicio 
 texto = "Um anel para todos governar, um anel para encontrá-los, um anel para a todos trazer e na escuridão aprisioná-los"
 print(texto.replace('anel', 'anelzinho')) #substitui uma palavra por outra dentro da string(print)
 
-
+format # retorna uma string formatada com os valores especificados.
 

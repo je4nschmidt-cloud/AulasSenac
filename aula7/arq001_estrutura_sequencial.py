@@ -12,35 +12,3 @@ print(delta)
 print("os valores de X são: ", x1, " e ", x2,".")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

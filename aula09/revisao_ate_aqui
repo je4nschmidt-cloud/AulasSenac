@@ -1,0 +1,53 @@
+nome = "Jean"
+print("Hello World!",nome,".")
+
+
+print("Digite seu nome:")
+nome = input(nome)
+print(f"Bem vindo: {nome}.")
+
+
+print("Digite sua idade.")
+idade = int(input())
+print(idade)
+print(f"Que legal, voce tem {idade} anos e nasceu em: {2026-idade}")
+
+
+print("Digite sua nota.")
+nota = int(input())
+
+if nota == 10:
+  print("Você foi aprovado com louvor.")
+elif nota == 9:
+  print("Voce tirou um A")
+elif nota >= 5:
+  print("Voce tirou um B.")
+else:
+  print("Voce foi reprovado.")
+
+
+  print("Digite seu nome e seu cargo:")
+nome = input()
+cargo = input()
+
+if nome == "Jean" and cargo == "Presidente":
+  print(f"Bem vindo, {cargo} {nome}!")
+elif nome == "Jean" and cargo != "Presidente":
+  print(f"Bem vindo, {nome}.")
+else:
+  print("Olá visitante.")
+
+
+print("Digite o salario e se é contratado.")
+salario = input()
+contratado = input()
+
+if salario != 0:
+  print("Salario maior que 0.")
+else:
+  if contratado == "sim":
+    print("Erro na digitação do salario.")
+  else:
+    ("Essa pessoa não trabalha conosco.")
+
+

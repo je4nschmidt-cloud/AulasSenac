@@ -41,7 +41,7 @@ while indice < len(nome):
 # imprima o nome do usuario de tras para frente, usando while.
 
 nome_ = input("Digite seu nome: ")
-i = len(nome_) - 1
+i = len(nome_) - 1 #len(nome_) - 1 é usado para pegar o ultimo indice da string, pois o indice começa do 0. Ex: "Jean" tem 4 letras, mas o ultimo indice é 3.
 while i >= 0:
     print(nome_[i], end="")
     i -= 1

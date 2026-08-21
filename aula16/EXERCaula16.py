@@ -130,65 +130,73 @@ import random
 chamado = {}
 
 while True:
-    print("sistema de cahmados de TI\n")
+    print("\nSISTEMA DE CHAMADOS DE TI\n")
     print("1 - Criar chamado")
-    print("2 - consultar chamado")
-    print("3 - alterar prioridade")
-    print("4 - alterar status")
-    print("5 - remover categoria")
-    print("6 - mostrar chamado completo")
-    print("7 - encerrar o chamado")
+    print("2 - Consultar Chamado")
+    print("3 - Alterar Prioridade")
+    print("4 - Alterar Status")
+    print("5 - Remover Categoria")
+    print("6 - Mostrar Chamado Completo")
+    print("7 - Encerrar")
 
-    opcao = input("escolha uma opção: ")
+    opcao = input("Escolha uma Opção: ")
 
     if opcao == "1":
-        chamado["numero"] = random
-        chamado["solicitante"] = input("Digite seu nome: ")
-        chamado["categoria"] = input("digite a categoria: ")
+        chamado["numero"] = input("Digite o numero do chamado: ")
+        chamado["solicitante"] = input("Digite o nome do solicitante: ")
+        chamado["categoria"] = input("Digite a categoria do chamado: ")
         chamado["prioridade"] = input("Digite a prioridade: ")
-        cahamdo["status"] = "Aberto"
+        chamado["status"] = "Aberto"
 
-    print("chamado criado com sucesso!")
+        print("Chamado criado com sucesso!")
 
-    if chamado["priorudade"].lower() == "alta":
-        print("chamado urgente!")
+        if chamado["prioridade"].lower() == "alta":
+            print("Atendimento Urgente!")
 
     elif opcao == "2":
         if chamado:
             print("\nRESUMO DO CHAMADO")
-            print("chamado numero: ", chamado["numero"])
-            print("solicitante do chamado: ", chamado["solicitante"])
-            print("Status do chamado:", chamado["status"])
+            print("Chamado número: ", chamado["numero"])
+            print("Solicitante do chamado: ", chamado["solicitante"])
+            print("Status do chamado: ", chamado["status"])
         else:
-            print("Nenhum chamado cadastrado.")
-
+            print("Nenhum chamado cadastrado!")
 
     elif opcao == "3":
         if chamado:
-
+            chamado["prioridade"] = input("Digite a nova prioridade: ")
+            print("Prioridade atualizada com sucesso!")
+        else:
+            print("Nenhum chamado cadastrado!")
 
     elif opcao == "4":
         if chamado:
+            chamado["status"] = input("Digite o novo status: ")
+            print("Status atualizado com sucesso!")
+        else:
+            print("Nenhum chamado cadastrado!")
 
     elif opcao == "5":
         try:
             del chamado["categoria"]
-            print("categoria removida.")
+            print("Categoria removida.")
         except:
+            print("Categoria não encontrada!")
 
     elif opcao == "6":
         if chamado:
             print("\nCHAMADO COMPLETO:")
-            for chave, valor in chamado.items()
-                print(chave,",",valor)
+            for chave, valor in chamado.items():
+                print(chave, ":", valor)
         else:
-            print("nenhum chamado registrado!")
+            print("Nenhum chamado cadastrado!")
 
     elif opcao == "7":
-        print("sistema encerrado!")
+        print("Sistema Encerrado.")
         break
+
     else:
-        print("Opção invalida.")
+        print("Opção Invalida")
         
 
  

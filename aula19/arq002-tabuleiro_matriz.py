@@ -1,54 +1,66 @@
 
 
+tabuleiro = [
+        ["-","-","-"],
+        ["-","-","-"],
+        ["-","-","-"]
+    ]
 
+jogador = 'X'
+jogadas = 0
+ganhou = False
 
+while jogadas < 9 and not ganhou:
+    print("\nTabuleiro Atual:")
+    for linha in tabuleiro:
+        print(' '.join(linha))
 
+    print(f"\nVez do jogador: {jogador}")
 
+    linha = int(input("Digite a linha (0, 1 ou 2)"))
+    coluna = int(input("Digite a coluna (0, 1 ou 2)"))
 
+    if tabuleiro[linha][coluna] != '-':
+        print("\n Posição já ocupada! Tente novamente.")
+        continue
 
+    tabuleiro[linha][coluna] = jogador
+    jogadas = jogadas + 1
 
-linha = int(input("digite a linha (1,2,3)")) - 1
-coluna = int(input(""digite a coluna (1,2,3)"")) -1
+    # -------- VERIFICAÇÃO DE VITORIA
 
-if tabuleiro[linha][coluna] != "-":
-    print("\n Posição ja ocupada! Tente denovo.")
-    continue
+    # 1. Checar as 3 linhas
+    for l in range(3):
+        if tabuleiro[l][0] == jogador and tabuleiro[l][1] == jogador and tabuleiro[l][2] == jogador:
+            ganhou = True
 
-tabuleiro[linha][coluna] = jogador
-jogadas += 1
+    # 1. Checar as 3 colunas
+    for c in range(3):
+        if tabuleiro[0][c] == jogador and tabuleiro[1][c] == jogador and tabuleiro[2][c] == jogador:
+            ganhou = True
 
-# -------------- verificação de vitoria:
-# 1- checando as tres linhas.
-
-for l in range(3):
-    if batuleiro[l][0] == jogador and tabuleiro [l][1] == jogador and tabuleiro [l][2] == jogador:
+    # 3. Checar a diagonal principal
+    if tabuleiro[0][0] == jogador and tabuleiro[1][1] == jogador and tabuleiro[2][2] == jogador:
         ganhou = True
 
-# ----------------- checando as colunas.
-for c in range(3):
-    if batuleiro[0][c] == jogador and tabuleiro [1][c] == jogador and tabuleiro [2][c] == jogador:
-        ganhou = True
+    # 4. Checar a diagonal secundaria
+    if tabuleiro[0][2] == jogador and tabuleiro[1][1] == jogador and tabuleiro[2][0] == jogador:
+            ganhou = True
 
-# -------------- checando a diagonal principal.
+    if ganhou:
+        print("\n=================================")
+        for linha in tabuleiro:
+            print(' '.join(linha))
+        print(f"\nParabéns! O jogador '{jogador}' VENCEU!")
+        break
 
-if batuleiro[0][0] == jogador and tabuleiro [1][1] == jogador and tabuleiro [2][2] == jogador:
-        ganhou = True
-
-if batuleiro[0][2] == jogador and tabuleiro [1][1] == jogador and tabuleiro [2][0] == jogador:
-        ganhou = True
-
-if ganhou:
-     print("Parabens, você GANHOUUU! ")
-
-
-## ----------------- alterna a jogada se ninguem venceu!
-
-if jogador == "x":
-    jogador = "o"
-else:
-    jogador == "x"
+    # Alterna a jogado caso ninguem tenha vencido
+    if jogador == 'X':
+        jogador = 'O'
+    else:
+        jogador = 'X'
 
 if not ganhou:
-    print("".join(linha))
-    print(f"\Deu velha! o tabuleiro acabou.")
-
+    for linha in tabuleiro:
+        print(' '.join(linha))
+    print(f"\Deu velha! O tabuleiro foi completamente preenchido!")

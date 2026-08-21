@@ -144,3 +144,5 @@ sugestao_para_mim = rede_joana - minha_rede - {meu_nome}
 print(f"Sugestão para mim: ")
 for pessoa in sugestao_para_mim:
     print(f" + Adicionar {pessoa}")
+
+
